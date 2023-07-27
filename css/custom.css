@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+}
+#content {
+  position: relative;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;	
+}
+.white-text {
+  color: white;
+}
+
+.h2{
+    width: 503px;
+    margin: 20px 0px;
+    padding: 10px;
+    font-size: 25px;
+	text-align: center;
+    background: #226cc2;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 1px 5px #222;
+    -moz-box-shadow: 0 1px #222;
+    box-shadow: 0 1px #222;
+}
+select{
+	max-width:81%;
+}
+
+nav{
+	background: #226cc2;
+}
+.img{
+	width: 500px;
+    height: 40px;
+}
+
+textarea {
+    width: 300px;
+    height: 150px;
+}
+
+.carousel-wrapper{
+  height:400px;
+  position:relative;
+  width:800px;
+  margin:0 auto;
+}
+.carousel-item{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:25px 50px;
+  opacity:0;
+  transition: all 0.5s ease-in-out;
+}
+.arrow{
+  border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.arrow-prev{
+  left:-30px;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%) rotate(135deg);
+}
+ 
+.arrow-next{
+    right:-30px;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%) rotate(-45deg);
+  }
+
+.light{
+  color:white;
+}
+
+@media (max-width: 480px) {
+      .arrow, .light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+      }
+    }
+}
+
+/*Select every element*/
+[id^="item"] {
+    display: none;
+  }
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+  background:url("1_jM6QtWfqvEQDf8xANHJXZA.png");
+  background-size:cover;
+  }
+.item-2{
+  background:url("../images/soccer-5585294_1920-800x504.jpg");
+   background-size:cover;
+}
+.item-3{
+  background:url("../images/HD-wallpaper-estadio-nacional-mane-garrincha-estadio-nacional-de-brasilia-brasilia-brazil-brasilia-fc-stadium-brazilian-football-stadium-new-brazilian-stadiums.jpg");
+   background-size:cover;
+}
+
+*:target ~ .item-1 {
+    opacity: 0;
+  }
+
+#item-1:target ~ .item-1 {
+    opacity: 1;
+  }
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+  }
+}
